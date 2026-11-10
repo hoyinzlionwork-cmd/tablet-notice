@@ -54,6 +54,7 @@ section { display: flex; flex-direction: column; gap: 14px; }
 .alert .k { font-size: 14px; font-weight: 700; color: var(--accent); letter-spacing: .04em; }
 .alert .when { font-size: clamp(20px, 4.6vw, 26px); font-weight: 700; color: var(--accent); line-height: 1.35; }
 .alert p { margin: 0; }
+.nw { white-space: nowrap; display: inline-block; }
 .alert .rule { font-weight: 700; color: var(--accent); }
 .prices { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
 .prices th, .prices td { padding: 12px 10px; border-bottom: 1px solid var(--line); text-align: right; }
@@ -91,7 +92,7 @@ section { display: flex; flex-direction: column; gap: 14px; }
     <p class="scope"><b>適用</b>　國外團（Outbound）、國旅團　｜　主題團、客製團另行通知</p>
     <div class="alert" role="note">
       <div class="k">重要｜登記與付款期間</div>
-      <div class="when">2026/11/11（三）～ 11/17（二）23:59</div>
+      <div class="when"><span class="nw">2026/11/11（三）～</span> <span class="nw">11/17（二）23:59</span></div>
       <p class="rule">補助僅適用於期間內「完成登記表」且「成功付款」者，逾期不予補助。</p>
     </div>
   </header>
