@@ -76,6 +76,9 @@ section { display: flex; flex-direction: column; gap: 14px; }
 .hit .who { font-size: 20px; font-weight: 700; }
 .hit .t { font-size: 14px; color: var(--muted); }
 .miss { font-weight: 700; }
+.mailtip { margin: 0; font-size: 14px; border-left: 3px solid var(--accent); padding: 2px 0 2px 10px; }
+.owner { margin: 0; border: 2px solid var(--accent); border-radius: 10px; padding: 12px 16px; font-size: 15px; }
+.owner b { color: var(--accent); }
 .flyer { max-width: 280px; border: 1px solid var(--line); border-radius: 8px; display: block; }
 @media (max-width: 560px) {
   .qr { grid-template-columns: 1fr; justify-items: start; }
@@ -93,7 +96,7 @@ section { display: flex; flex-direction: column; gap: 14px; }
     <div class="alert" role="note">
       <div class="k">重要｜登記與付款期間</div>
       <div class="when"><span class="nw">2026/11/11（三）～</span> <span class="nw">11/17（二）23:59</span></div>
-      <p class="rule">補助僅適用於期間內「完成登記表」且「成功付款」者，逾期不予補助。</p>
+      <p class="rule">須於期間內「完成登記表」且「成功付款」，逾期視同放棄申購（專任導領亦不予補助）。</p>
     </div>
   </header>
 
@@ -107,12 +110,13 @@ section { display: flex; flex-direction: column; gap: 14px; }
       </tbody>
     </table>
     <p class="note">iPad mini 128GB 午夜色；5G 版僅支援 eSIM。每人限購一台。</p>
+    <p class="owner"><b>平板歸購買人個人所有，不是公司資產。</b>領取當天驗收、簽署《設備驗收同意書》後，保管與維修由本人自行負責。</p>
   </section>
 
   <section aria-labelledby="h-notice">
     <div class="head">
       <h2 id="h-notice">公告文字</h2>
-      <button class="btn primary" id="copy-notice" type="button">複製公告</button>
+      <button class="btn" id="copy-notice" type="button">複製公告</button>
     </div>
     <pre class="notice" id="notice-text">【平板申購公告】2027/1/1 起帶團需使用平板
 
@@ -120,7 +124,7 @@ section { display: flex; flex-direction: column; gap: 14px; }
 配合 TLE 導領 E 化平台上線，自 2027 年 1 月 1 日起，國外團（Outbound）及國旅團帶團需使用平板；主題團、客製團另行通知。
 
 【重要】登記與付款期間：2026/11/11（三）～11/17（二）23:59
-補助僅適用於期間內完成登記表且成功付款者，逾期不予補助。
+須於期間內完成登記表且成功付款，逾期視同放棄申購（專任導領亦不予補助）。
 
 公司統一團購 iPad mini（128GB 午夜色，Wi-Fi／Wi-Fi＋5G 版）：
 ・專任導領：公司補助 NT$10,000，購買時直接扣抵，每人限領一次
@@ -129,21 +133,26 @@ section { display: flex; flex-direction: column; gap: 14px; }
 　應付 Wi-Fi 版 NT$21,380／Wi-Fi＋5G 版 NT$26,040
 ・採自願制，也可用自己的平板帶團；每人限購一台
 
+【設備權責】
+平板是你個人的財產，不是公司資產。簽署驗收同意書後，保管、遺失、損壞都由本人負責；
+之後如有故障，請自行依 Apple 原廠保固維修管道處理，公司不代收故障機、不代送修。
+
 申購流程：
 1. 填寫登記表（選身分、版本與希望領取日期）
 https://docs.google.com/forms/d/e/1FAIpQLScBRnBCwPRIjfkRc_nUYg1U1YS1kxVSOd4e8PlcC0XqD_pPJw/viewform
+　送出後系統會寄「登記確認信」到你填的 email（內有應付金額與匯款資料）
+　寄件人顯示「TLE 平板團購」，主旨開頭為【iPad mini 團購】
+　沒收到請先查看「垃圾郵件」或「促銷內容」資料夾
 2. 匯款（金額如上）
 兆豐國際商業銀行 國外部（017）
-帳號 007-09-10176-0
+帳號 007-09-10176-0（ATM 轉帳輸入 00709101760）
 戶名 雄獅旅行社股份有限公司
+　請用本人帳戶，一人一筆，金額需與應付金額完全相同，勿與他人合併匯款
 3. 再開一次登記表，選「回報付款」，填自己匯出帳戶的末五碼
 　回報後可到公告頁輸入末五碼，確認表單已送達
 https://hoyinzlionwork-cmd.github.io/tablet-notice/
-4. 到公司點交簽收：登記時選的希望領取日期僅供統計，實際領取時間與地點另行公告
-
-設備點交驗收後如有故障，請依廠商提供的保固維修管道處理，公司不代收送修。
-詳細規定請見附件《導領人員設備申購管理辦法》。
-領取地點與聯絡窗口另行通知。</pre>
+4. 本人到公司領取：當場開箱驗收，確認無誤後簽署《設備驗收同意書》
+　登記時選的希望領取日期僅供統計；實際領取時間、地點與聯絡窗口另行公告</pre>
     <p class="status" id="notice-status" aria-live="polite"></p>
   </section>
 
@@ -154,6 +163,7 @@ https://hoyinzlionwork-cmd.github.io/tablet-notice/
       <div class="txt">
         <div class="big">掃碼登記</div>
         <div>iPad mini 採購登記表<br><span style="color:var(--muted)">登記採購、回報付款都用這一張表</span></div>
+        <p class="mailtip">送出登記後會收到<b>確認信</b>（寄件人「TLE 平板團購」，含應付金額與匯款資料）。沒收到請查看<b>垃圾郵件</b>或<b>促銷內容</b>。</p>
         <div class="row">
           <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScBRnBCwPRIjfkRc_nUYg1U1YS1kxVSOd4e8PlcC0XqD_pPJw/viewform" target="_blank" rel="noopener">開啟登記表</a>
           <button class="btn" id="copy-link" type="button">複製連結</button>
@@ -179,30 +189,20 @@ https://hoyinzlionwork-cmd.github.io/tablet-notice/
   </section>
 
   <section aria-labelledby="h-files">
-    <h2 id="h-files">相關文件</h2>
+    <h2 id="h-files">說明圖</h2>
     <div class="files">
-      <div class="file">
-        <div>
-          <div class="name">導領人員設備申購管理辦法</div>
-          <div class="meta">PDF・最新版</div>
-        </div>
-        <div class="row">
-          <a class="btn" href="tablet-policy.pdf?v=202611101538" target="_blank" rel="noopener">開啟 PDF</a>
-          <a class="btn primary" href="tablet-policy.pdf?v=202611101538" download="導領人員設備申購管理辦法.pdf">下載 PDF</a>
-        </div>
-      </div>
       <div class="file">
         <div>
           <div class="name">領隊平板申購說明圖</div>
           <div class="meta">PNG・手機直式，可直接轉傳 LINE</div>
         </div>
         <div class="row">
-          <a class="btn" href="leader-flyer.png?v=202611101538" target="_blank" rel="noopener">開啟圖片</a>
-          <a class="btn primary" href="leader-flyer.png?v=202611101538" download="領隊平板申購說明.png">下載圖片</a>
+          <a class="btn" href="leader-flyer.png?v=202611111800" target="_blank" rel="noopener">開啟圖片</a>
+          <a class="btn" href="leader-flyer.png?v=202611111800" download="領隊平板申購說明.png">下載圖片</a>
         </div>
       </div>
     </div>
-        <img class="flyer" src="leader-flyer.png?v=202611101538" alt="領隊平板申購說明圖預覽" loading="lazy">
+        <img class="flyer" src="leader-flyer.png?v=202611111800" alt="領隊平板申購說明圖預覽" loading="lazy">
   </section>
 </div>
 
