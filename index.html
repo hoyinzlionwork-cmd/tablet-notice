@@ -63,6 +63,9 @@ section { display: flex; flex-direction: column; gap: 14px; }
 .prices thead th { font-size: 14px; color: var(--muted); font-weight: 500; }
 .prices td { font-size: 18px; font-weight: 700; }
 .prices td small { display: block; font-size: 13px; font-weight: 400; color: var(--muted); }
+.tag { display: inline-block; margin-top: 4px; font-size: 14px; font-weight: 700; line-height: 1.3; padding: 3px 10px; border-radius: 999px; border: 1.5px solid var(--fg); color: var(--fg); background: var(--bg); }
+.tag.hot { border-color: var(--accent); color: var(--accent); }
+.prices td .tag { display: table; }
 .prices .hot { color: var(--accent); }
 .note { font-size: 14px; color: var(--muted); margin: 0; }
 .lookup { border: 1px solid var(--line); border-radius: 12px; padding: 22px; display: flex; flex-direction: column; gap: 14px; }
@@ -105,8 +108,8 @@ section { display: flex; flex-direction: column; gap: 14px; }
     <table class="prices">
       <thead><tr><th scope="col">身分</th><th scope="col">Wi-Fi 版</th><th scope="col">Wi-Fi＋5G 版</th></tr></thead>
       <tbody>
-        <tr><td>專任導領<small>已扣公司補助 NT$10,000</small></td><td class="hot">NT$11,380</td><td class="hot">NT$16,040</td></tr>
-        <tr><td>約聘導領<small>團購價，無補助</small></td><td>NT$21,380</td><td>NT$26,040</td></tr>
+        <tr><td>專任導領<span class="tag hot">已扣公司補助 NT$10,000</span></td><td class="hot">NT$11,380</td><td class="hot">NT$16,040</td></tr>
+        <tr><td>約聘導領<span class="tag">團購價</span></td><td>NT$21,380</td><td>NT$26,040</td></tr>
       </tbody>
     </table>
     <p class="note">iPad mini 128GB 午夜色；5G 版僅支援 eSIM。每人限購一台。</p>
@@ -128,9 +131,9 @@ section { display: flex; flex-direction: column; gap: 14px; }
 
 公司統一團購 iPad mini（128GB 午夜色，Wi-Fi／Wi-Fi＋5G 版）：
 ・專任導領：公司補助 NT$10,000，購買時直接扣抵，每人限領一次
-　應付 Wi-Fi 版 NT$11,380／Wi-Fi＋5G 版 NT$16,040（已扣公司補助 NT$10,000）
-・約聘導領：無補助，可用團購價購買
-　應付 Wi-Fi 版 NT$21,380／Wi-Fi＋5G 版 NT$26,040
+　應付 Wi-Fi 版 NT$11,380／Wi-Fi＋5G 版 NT$16,040【已扣公司補助 NT$10,000】
+・約聘導領：無補助，以【團購價】購買
+　應付 Wi-Fi 版 NT$21,380／Wi-Fi＋5G 版 NT$26,040【團購價】
 ・採自願制，也可用自己的平板帶團；每人限購一台
 
 【設備權責】
@@ -197,12 +200,12 @@ https://hoyinzlionwork-cmd.github.io/tablet-notice/
           <div class="meta">PNG・手機直式，可直接轉傳 LINE</div>
         </div>
         <div class="row">
-          <a class="btn" href="leader-flyer.png?v=202611121010" target="_blank" rel="noopener">開啟圖片</a>
-          <a class="btn" href="leader-flyer.png?v=202611121010" download="領隊平板申購說明.png">下載圖片</a>
+          <a class="btn" href="leader-flyer.png?v=202611121012" target="_blank" rel="noopener">開啟圖片</a>
+          <a class="btn" href="leader-flyer.png?v=202611121012" download="領隊平板申購說明.png">下載圖片</a>
         </div>
       </div>
     </div>
-        <img class="flyer" src="leader-flyer.png?v=202611121010" alt="領隊平板申購說明圖預覽" loading="lazy">
+        <img class="flyer" src="leader-flyer.png?v=202611121012" alt="領隊平板申購說明圖預覽" loading="lazy">
   </section>
 </div>
 
