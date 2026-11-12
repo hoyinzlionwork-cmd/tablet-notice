@@ -56,6 +56,13 @@ section { display: flex; flex-direction: column; gap: 14px; }
 .alert p { margin: 0; }
 .nw { white-space: nowrap; display: inline-block; }
 .alert .rule { font-weight: 700; color: var(--accent); }
+.logo { display: block; width: 161px; height: auto; margin-bottom: 8px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo { background: #fff; padding: 6px 10px; border-radius: 8px; } }
+:root[data-theme="dark"] .logo { background: #fff; padding: 6px 10px; border-radius: 8px; }
+.lead { margin: 4px 0 0; font-size: 18px; line-height: 1.75; max-width: 40em; }
+.alert .subsidy { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 6px 0 2px; padding: 12px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: clamp(22px, 5vw, 30px); font-weight: 700; line-height: 1.3; }
+.alert .subsidy .who { font-size: 0.7em; color: var(--muted); }
+.alert .subsidy b { color: var(--accent); font-size: 1.15em; }
 .alert .final { font-size: 14px; font-weight: 700; color: var(--fg); }
 .prices { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
 .prices th, .prices td { padding: 12px 10px; border-bottom: 1px solid var(--line); text-align: right; }
@@ -94,12 +101,15 @@ section { display: flex; flex-direction: column; gap: 14px; }
 
 <div class="wrap">
   <header>
+    <img class="logo" src="lion-logo.jpg" width="161" height="50" alt="LION GROUP 雄獅集團">
     <div class="eyebrow">TLE 導領 E 化平台・平板申購</div>
-    <h1>2027/1/1 起<br>一起改用平板帶團</h1>
+    <h1>一起邁向<br>平板帶團</h1>
+    <p class="lead">為了響應無紙化，公司大力推動帶團數位化，並補助每位專任導領 NT$10,000 購買平板。2027/1/1 起逐步改用平板帶團，跟大家一起邁向數位化。</p>
     <p class="scope"><b>適用</b>　國外團（Outbound）、國旅團　｜　主題團、客製團另行通知</p>
     <div class="alert" role="note">
       <div class="k">重要｜登記與付款期間</div>
       <div class="when"><span class="nw">2026/11/11（三）～</span> <span class="nw">11/17（二）23:59</span></div>
+      <div class="subsidy"><span class="who">專任導領</span><span class="nw">已扣公司補助 <b>NT$10,000</b></span></div>
       <p class="rule">須於期間內「完成登記表」且「成功付款」，逾期視同放棄申購（專任導領亦不予補助）。</p>
       <p class="final">時間以 Google 表單紀錄為準；如有爭議，雄獅旅行社保有最終決定權。</p>
     </div>
@@ -118,15 +128,48 @@ section { display: flex; flex-direction: column; gap: 14px; }
     <p class="owner"><b>平板歸購買人個人所有，不是公司資產。</b>領取當天驗收、簽署《設備驗收同意書》後，保管、遺失、損壞與維修由本人自行負責；公司不代收故障機、不代送修。</p>
   </section>
 
+  <section aria-labelledby="h-form">
+    <h2 id="h-form">登記表 QR code</h2>
+    <div class="qr">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXEAAAFxAQAAAACt/KUJAAADqUlEQVR4nO1bW47iQAysbpAy0n4wNwg3CTcL3CzcBG4Q/kBiUis/EsLPDivtsJbS/pmeYKFWjF3lcjdgloiWJ1T3RKA5ba4rkntfoO3cDRl/Z7n4/+P305LkHeAe2FzWtrhsbvpN9fnjKyXuUYsXy/sP8Ps8pvSh6+NW/yR2NS/VALSHLbAakCSCKcl3l3z5s+W3+ae0q88fYGJKKUla4bA7f1a3FSXj3r6f1ywv2L85flZ3W27IQZ6wx+or/af9vGJ5Yf5w/BK+0dVUdoHGiUdL9hUHUCpkwa8Y8T1I+Vvbf0Yz2kPTY0K0rxXTHmfxSvF+b3lh/tC8sdxRS4JWlmik0HhdjLaPtv+8xHrYG2wpWg2QtkvDBCmV15UAmZiWymj7zwvzh7Zdml9tB2uT2dUWOHZQIPNEGwLuPy/MH6ZmmL7hhXFGM+DEo6v1Sbz954X5w2nhMFtoYdSPONVDybiCXzHyi4pfQjP6amIWhmgnK5VoCt8IEy8YWunCq5+hFYV4WCglpkU/jME3mlk2XfVZM+IXR6EeRkXi1fO8MH/MuIQGxfBr1n9B+KEDWem/YvBDjmOvaSGMkZSJmISypQBZiVcY/ZCqb0yyxsgG4QxE9flSD4PoUSdbyXzZ9KgRv/bSSpvw6z1auHqeF+aPJ1ne2fsTUYQVRoW2gl8h+GFvC+EbGp3O0op8yjh5UvTeAPkFn06O/FCr3wRkmCVavPqQF+YPJ+2ub5gs7wyfQjPGwWWZV0aap5BzkJJ5ihdGt+mEW7TfW16Y/5o47lB92YB5I9Pk6bPU7onbrzuSj56HePvPC/NfJzSn7a0ao3RfS3AaQg5KHRI2vYbpbfvJxf8ba3XIZfjlopMr9hjL4FQzy/uMwDdqxy9lg0bs/YR2Z08ejLHgV4R5CrXbskZM9UPvtiZTDV8XpV5F0OfhpzVGfcM6Mtp5gHnGFXwJ1H81LiTOBiunh75R4hVH763mh3in/gsqLT4rwKUeRsCv67MwNR5EJP3gjVqZp7xg+af9afnl53tvawGp43bD24o47DxMwuchN1YKfgXILzEJk6iFdnDUMo6P+Zdwfh09l3oY5X4K7aDvWAatHp4mn3L+MM48BZY7Ov8yBmJA1nrgzMp57FDxok5PxoMcNq/sxgrp+kaph99ZfqN/w/6W9HY5LnIxNqWdZJzckN0Jfr17P69YXi5+UcqgqBnTMVGOY2W7ulLuOwTjh7V1x48wUS6CudBR+uVX7Kfj9RsJnUd0LEFllwAAAABJRU5ErkJggg==" alt="iPad mini 採購登記表 QR code" width="200" height="200">
+      <div class="txt">
+        <div class="big">掃碼登記</div>
+        <div>iPad mini 採購登記表<br><span style="color:var(--muted)">登記採購、回報付款都用這一張表</span></div>
+        <p class="mailtip">送出登記後會收到<b>確認信</b>（寄件人「TLE 平板團購」，含應付金額與匯款資料）。沒收到請查看<b>垃圾郵件</b>或<b>促銷內容</b>。</p>
+        <div class="row">
+          <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScBRnBCwPRIjfkRc_nUYg1U1YS1kxVSOd4e8PlcC0XqD_pPJw/viewform" target="_blank" rel="noopener">開啟登記表</a>
+          <button class="btn" id="copy-link" type="button">複製連結</button>
+        </div>
+        <p class="url" id="form-url">https://docs.google.com/forms/d/e/1FAIpQLScBRnBCwPRIjfkRc_nUYg1U1YS1kxVSOd4e8PlcC0XqD_pPJw/viewform</p>
+      </div>
+    </div>
+    <p class="status" id="link-status" aria-live="polite"></p>
+  </section>
+
+  <section aria-labelledby="h-lookup">
+    <h2 id="h-lookup">付款回報查詢</h2>
+    <div class="lookup">
+      <p style="margin:0">填完「回報付款」後，輸入你匯出帳戶的<b>末五碼</b>，確認表單已送達。</p>
+      <form id="lookup-form" novalidate>
+        <label for="last5" class="note" style="width:100%">帳號末五碼</label>
+        <input id="last5" name="last5" inputmode="numeric" autocomplete="off" maxlength="5" pattern="\d{5}" placeholder="12345" aria-describedby="lookup-note">
+        <button class="btn primary" id="lookup-btn" type="submit">查詢</button>
+      </form>
+      <div class="result" id="lookup-result" aria-live="polite"></div>
+      <p class="note" id="lookup-note">查到資料＝已收到你的付款回報表單，<b>不等於已確認收款</b>；款項仍需由出納與銀行帳戶逐筆核對。姓名只顯示首尾字。</p>
+    </div>
+  </section>
+
   <section aria-labelledby="h-notice">
     <div class="head">
       <h2 id="h-notice">公告文字</h2>
       <button class="btn" id="copy-notice" type="button">複製公告</button>
     </div>
-    <pre class="notice" id="notice-text">【平板申購公告】2027/1/1 起，一起改用平板帶團
+    <pre class="notice" id="notice-text">【平板申購公告】一起邁向平板帶團
 
 各位導領夥伴好：
-配合 TLE 導領 E 化平台上線，自 2027/1/1 起，國外團（Outbound）及國旅團將改用平板帶團；主題團、客製團另行通知。
+為了響應無紙化，公司大力推動帶團數位化，並補助每位專任導領 NT$10,000 購買平板。
+2027/1/1 起，國外團（Outbound）及國旅團將逐步改用平板帶團（主題團、客製團另行通知），跟大家一起邁向數位化。
 
 【重要】登記與付款期間
 2026/11/11（三）～ 11/17（二）23:59
@@ -178,38 +221,6 @@ https://hoyinzlionwork-cmd.github.io/tablet-notice/
     <p class="status" id="notice-status" aria-live="polite"></p>
   </section>
 
-  <section aria-labelledby="h-form">
-    <h2 id="h-form">登記表 QR code</h2>
-    <div class="qr">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXEAAAFxAQAAAACt/KUJAAADqUlEQVR4nO1bW47iQAysbpAy0n4wNwg3CTcL3CzcBG4Q/kBiUis/EsLPDivtsJbS/pmeYKFWjF3lcjdgloiWJ1T3RKA5ba4rkntfoO3cDRl/Z7n4/+P305LkHeAe2FzWtrhsbvpN9fnjKyXuUYsXy/sP8Ps8pvSh6+NW/yR2NS/VALSHLbAakCSCKcl3l3z5s+W3+ae0q88fYGJKKUla4bA7f1a3FSXj3r6f1ywv2L85flZ3W27IQZ6wx+or/af9vGJ5Yf5w/BK+0dVUdoHGiUdL9hUHUCpkwa8Y8T1I+Vvbf0Yz2kPTY0K0rxXTHmfxSvF+b3lh/tC8sdxRS4JWlmik0HhdjLaPtv+8xHrYG2wpWg2QtkvDBCmV15UAmZiWymj7zwvzh7Zdml9tB2uT2dUWOHZQIPNEGwLuPy/MH6ZmmL7hhXFGM+DEo6v1Sbz954X5w2nhMFtoYdSPONVDybiCXzHyi4pfQjP6amIWhmgnK5VoCt8IEy8YWunCq5+hFYV4WCglpkU/jME3mlk2XfVZM+IXR6EeRkXi1fO8MH/MuIQGxfBr1n9B+KEDWem/YvBDjmOvaSGMkZSJmISypQBZiVcY/ZCqb0yyxsgG4QxE9flSD4PoUSdbyXzZ9KgRv/bSSpvw6z1auHqeF+aPJ1ne2fsTUYQVRoW2gl8h+GFvC+EbGp3O0op8yjh5UvTeAPkFn06O/FCr3wRkmCVavPqQF+YPJ+2ub5gs7wyfQjPGwWWZV0aap5BzkJJ5ihdGt+mEW7TfW16Y/5o47lB92YB5I9Pk6bPU7onbrzuSj56HePvPC/NfJzSn7a0ao3RfS3AaQg5KHRI2vYbpbfvJxf8ba3XIZfjlopMr9hjL4FQzy/uMwDdqxy9lg0bs/YR2Z08ejLHgV4R5CrXbskZM9UPvtiZTDV8XpV5F0OfhpzVGfcM6Mtp5gHnGFXwJ1H81LiTOBiunh75R4hVH763mh3in/gsqLT4rwKUeRsCv67MwNR5EJP3gjVqZp7xg+af9afnl53tvawGp43bD24o47DxMwuchN1YKfgXILzEJk6iFdnDUMo6P+Zdwfh09l3oY5X4K7aDvWAatHp4mn3L+MM48BZY7Ov8yBmJA1nrgzMp57FDxok5PxoMcNq/sxgrp+kaph99ZfqN/w/6W9HY5LnIxNqWdZJzckN0Jfr17P69YXi5+UcqgqBnTMVGOY2W7ulLuOwTjh7V1x48wUS6CudBR+uVX7Kfj9RsJnUd0LEFllwAAAABJRU5ErkJggg==" alt="iPad mini 採購登記表 QR code" width="200" height="200">
-      <div class="txt">
-        <div class="big">掃碼登記</div>
-        <div>iPad mini 採購登記表<br><span style="color:var(--muted)">登記採購、回報付款都用這一張表</span></div>
-        <p class="mailtip">送出登記後會收到<b>確認信</b>（寄件人「TLE 平板團購」，含應付金額與匯款資料）。沒收到請查看<b>垃圾郵件</b>或<b>促銷內容</b>。</p>
-        <div class="row">
-          <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScBRnBCwPRIjfkRc_nUYg1U1YS1kxVSOd4e8PlcC0XqD_pPJw/viewform" target="_blank" rel="noopener">開啟登記表</a>
-          <button class="btn" id="copy-link" type="button">複製連結</button>
-        </div>
-        <p class="url" id="form-url">https://docs.google.com/forms/d/e/1FAIpQLScBRnBCwPRIjfkRc_nUYg1U1YS1kxVSOd4e8PlcC0XqD_pPJw/viewform</p>
-      </div>
-    </div>
-    <p class="status" id="link-status" aria-live="polite"></p>
-  </section>
-
-  <section aria-labelledby="h-lookup">
-    <h2 id="h-lookup">付款回報查詢</h2>
-    <div class="lookup">
-      <p style="margin:0">填完「回報付款」後，輸入你匯出帳戶的<b>末五碼</b>，確認表單已送達。</p>
-      <form id="lookup-form" novalidate>
-        <label for="last5" class="note" style="width:100%">帳號末五碼</label>
-        <input id="last5" name="last5" inputmode="numeric" autocomplete="off" maxlength="5" pattern="\d{5}" placeholder="12345" aria-describedby="lookup-note">
-        <button class="btn primary" id="lookup-btn" type="submit">查詢</button>
-      </form>
-      <div class="result" id="lookup-result" aria-live="polite"></div>
-      <p class="note" id="lookup-note">查到資料＝已收到你的付款回報表單，<b>不等於已確認收款</b>；款項仍需由出納與銀行帳戶逐筆核對。姓名只顯示首尾字。</p>
-    </div>
-  </section>
-
   <section aria-labelledby="h-files">
     <h2 id="h-files">說明圖</h2>
     <div class="files">
@@ -219,12 +230,12 @@ https://hoyinzlionwork-cmd.github.io/tablet-notice/
           <div class="meta">PNG・手機直式，可直接轉傳 LINE</div>
         </div>
         <div class="row">
-          <a class="btn" href="leader-flyer.png?v=202611121216" target="_blank" rel="noopener">開啟圖片</a>
-          <a class="btn" href="leader-flyer.png?v=202611121216" download="導領平板申購說明.png">下載圖片</a>
+          <a class="btn" href="leader-flyer.png?v=202611121345" target="_blank" rel="noopener">開啟圖片</a>
+          <a class="btn" href="leader-flyer.png?v=202611121345" download="導領平板申購說明.png">下載圖片</a>
         </div>
       </div>
     </div>
-        <img class="flyer" src="leader-flyer.png?v=202611121216" alt="導領平板申購說明圖預覽" loading="lazy">
+        <img class="flyer" src="leader-flyer.png?v=202611121345" alt="導領平板申購說明圖預覽" loading="lazy">
   </section>
 </div>
 
