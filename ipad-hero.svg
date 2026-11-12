@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -10 680 262" width="680" height="262" role="img" aria-label="iPad mini 帶團日報">
+  <defs>
+    <linearGradient id="d3-brand" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#F7782A"/>
+      <stop offset=".3" stop-color="#FD3536"/>
+      <stop offset=".72" stop-color="#FF1456"/>
+      <stop offset="1" stop-color="#FF4A92"/>
+    </linearGradient>
+    <linearGradient id="d3-rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6A7385"/>
+      <stop offset=".18" stop-color="#3B4251"/>
+      <stop offset=".7" stop-color="#2E3440"/>
+      <stop offset="1" stop-color="#1F242C"/>
+    </linearGradient>
+    <linearGradient id="d3-edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".75"/>
+      <stop offset=".35" stop-color="#FFFFFF" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".05"/>
+    </linearGradient>
+    <linearGradient id="d3-glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1A1E26"/>
+      <stop offset="1" stop-color="#0E1015"/>
+    </linearGradient>
+    <linearGradient id="d3-markfade" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#FFFFFF" stop-opacity="1"/><stop offset="1" stop-color="#FFFFFF" stop-opacity=".35"/></linearGradient>
+    <linearGradient id="d3-sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".0"/>
+      <stop offset=".40" stop-color="#FFFFFF" stop-opacity=".0"/>
+      <stop offset=".47" stop-color="#FFFFFF" stop-opacity=".16"/>
+      <stop offset=".60" stop-color="#FFFFFF" stop-opacity=".0"/>
+    </linearGradient>
+    <linearGradient id="d3-bar" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#FF1456"/>
+      <stop offset="1" stop-color="#FF4A92"/>
+    </linearGradient>
+
+    <!-- LION LEAD double-check motif, redrawn -->
+    <symbol id="d3-mark" viewBox="0 0 100 100">
+      <polyline points="16,44 35,63 64,34" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="miter" stroke-linecap="butt" opacity=".62"/>
+      <polyline points="16,44 35,63 44.5,53.5" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linejoin="miter" stroke-linecap="butt"/>
+      <polyline points="35,44 54,63 86,31" fill="none" stroke="url(#d3-markfade)" stroke-width="14" stroke-linejoin="miter" stroke-linecap="butt"/>
+    </symbol>
+
+    <!-- small white check used in checkboxes -->
+    <symbol id="d3-tick" viewBox="0 0 12 12">
+      <polyline points="3,6.3 5.2,8.4 9.2,4" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <filter id="d3-shadow" x="-25%" y="-20%" width="150%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="11" result="d3-b1"/>
+      <feOffset in="d3-b1" dy="12" result="d3-o1"/>
+      <feFlood flood-color="#5C0020" flood-opacity=".42"/>
+      <feComposite in2="d3-o1" operator="in" result="d3-s1"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.6" result="d3-b2"/>
+      <feOffset in="d3-b2" dy="2" result="d3-o2"/>
+      <feFlood flood-color="#3A0012" flood-opacity=".35"/>
+      <feComposite in2="d3-o2" operator="in" result="d3-s2"/>
+      <feMerge><feMergeNode in="d3-s1"/><feMergeNode in="d3-s2"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="d3-soft" x="-30%" y="-30%" width="160%" height="180%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="7" result="d3-sb"/>
+      <feOffset in="d3-sb" dy="7" result="d3-so"/>
+      <feFlood flood-color="#5C0020" flood-opacity=".3"/>
+      <feComposite in2="d3-so" operator="in" result="d3-ss"/>
+      <feMerge><feMergeNode in="d3-ss"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="d3-blur4" x="-20%" y="-200%" width="140%" height="500%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+
+    <clipPath id="d3-clip-main"><rect x="0" y="0" width="280" height="187" rx="15"/></clipPath>
+    <clipPath id="d3-clip-side"><rect x="0" y="0" width="108" height="164" rx="11"/></clipPath>
+
+    <!-- portrait device shell (126 x 182), camera on long edge -->
+    <g id="d3-shell-p">
+      <rect x="0" y="0" width="126" height="182" rx="20" fill="url(#d3-rim)"/>
+      <rect x="1.5" y="1.5" width="123" height="179" rx="18.5" fill="url(#d3-glass)"/>
+      <rect x=".6" y=".6" width="124.8" height="180.8" rx="19.4" fill="none" stroke="url(#d3-edge)" stroke-width="1.1"/>
+      <circle cx="120.9" cy="91" r="1.7" fill="#2B3240"/>
+    </g>
+  </defs>
+
+  <!-- ground shadow -->
+  <ellipse cx="340" cy="228" rx="250" ry="7" fill="#5C0020" opacity=".22" filter="url(#d3-blur4)"/>
+
+  <!-- ============ LEFT portrait (behind, faded) ============ -->
+  <g transform="translate(104 46) scale(.9)" opacity=".9" filter="url(#d3-soft)">
+    <use href="#d3-shell-p" xlink:href="#d3-shell-p"/>
+    <g transform="translate(9 9)">
+      <g clip-path="url(#d3-clip-side)">
+        <rect width="108" height="164" fill="#FFFFFF"/>
+        <rect x="10" y="12" width="38" height="6" rx="3" fill="#1C2130"/>
+        <circle cx="95" cy="15" r="5" fill="#E3E6EC"/>
+        <rect x="10" y="26" width="88" height="44" rx="9" fill="url(#d3-brand)"/>
+        <use href="#d3-mark" xlink:href="#d3-mark" x="13" y="29" width="38" height="38"/>
+        <rect x="58" y="38" width="30" height="5" rx="2.5" fill="#FFFFFF" opacity=".95"/>
+        <rect x="58" y="48" width="20" height="4" rx="2" fill="#FFFFFF" opacity=".65"/>
+        <g>
+          <rect x="10" y="80" width="88" height="16" rx="5" fill="#F5F6F9"/>
+          <circle cx="19" cy="88" r="4.4" fill="url(#d3-brand)"/>
+          <use href="#d3-tick" xlink:href="#d3-tick" x="14.6" y="83.6" width="8.8" height="8.8"/>
+          <rect x="28" y="86" width="44" height="4" rx="2" fill="#A3A9B5"/>
+        </g>
+        <g>
+          <rect x="10" y="100" width="88" height="16" rx="5" fill="#F5F6F9"/>
+          <circle cx="19" cy="108" r="4.4" fill="url(#d3-brand)"/>
+          <use href="#d3-tick" xlink:href="#d3-tick" x="14.6" y="103.6" width="8.8" height="8.8"/>
+          <rect x="28" y="106" width="36" height="4" rx="2" fill="#A3A9B5"/>
+        </g>
+        <g>
+          <rect x="10" y="120" width="88" height="16" rx="5" fill="#F5F6F9"/>
+          <circle cx="19" cy="128" r="4" fill="#FFFFFF" stroke="#C3C8D2" stroke-width="1.2"/>
+          <rect x="28" y="126" width="50" height="4" rx="2" fill="#3A4050"/>
+        </g>
+        <rect x="10" y="144" width="88" height="10" rx="5" fill="#F1F2F6"/>
+        <rect x="10" y="144" width="60" height="10" rx="5" fill="url(#d3-brand)" opacity=".9"/>
+        <rect width="108" height="164" fill="#FFFFFF" opacity=".42"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============ RIGHT portrait (behind, faded) ============ -->
+  <g transform="translate(462 46) scale(.9)" opacity=".9" filter="url(#d3-soft)">
+    <use href="#d3-shell-p" xlink:href="#d3-shell-p"/>
+    <g transform="translate(9 9)">
+      <g clip-path="url(#d3-clip-side)">
+        <rect width="108" height="164" fill="#FFFFFF"/>
+        <rect x="10" y="12" width="44" height="6" rx="3" fill="#1C2130"/>
+        <circle cx="95" cy="15" r="5" fill="#E3E6EC"/>
+        <rect x="10" y="26" width="88" height="70" rx="9" fill="#F1F3F7"/>
+        <path d="M10 70 C 30 60, 40 80, 60 62 S 90 50, 98 44" fill="none" stroke="#FFFFFF" stroke-width="7"/>
+        <path d="M22 80 C 34 70, 44 52, 62 56 S 82 46, 86 38" fill="none" stroke="url(#d3-brand)" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="1 4.2"/>
+        <circle cx="22" cy="80" r="4.2" fill="#FFFFFF" stroke="#FF1456" stroke-width="2"/>
+        <path d="M86 26.5 a7 7 0 0 1 7 7 c0 5 -7 11 -7 11 s-7 -6 -7 -11 a7 7 0 0 1 7 -7z" fill="url(#d3-brand)"/>
+        <circle cx="86" cy="33.5" r="2.4" fill="#FFFFFF"/>
+        <g>
+          <rect x="10" y="104" width="88" height="16" rx="5" fill="#F5F6F9"/>
+          <rect x="15" y="107.5" width="9" height="9" rx="3" fill="#FFE1EA"/>
+          <rect x="29" y="110" width="40" height="4" rx="2" fill="#3A4050"/>
+          <rect x="80" y="109" width="13" height="6" rx="3" fill="#FFE1EA"/>
+        </g>
+        <g>
+          <rect x="10" y="124" width="88" height="16" rx="5" fill="#F5F6F9"/>
+          <rect x="15" y="127.5" width="9" height="9" rx="3" fill="#E4E7ED"/>
+          <rect x="29" y="130" width="32" height="4" rx="2" fill="#A3A9B5"/>
+        </g>
+        <rect x="10" y="146" width="88" height="10" rx="5" fill="url(#d3-brand)"/>
+        <rect width="108" height="164" fill="#FFFFFF" opacity=".42"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============ MAIN landscape iPad mini ============ -->
+  <g filter="url(#d3-shadow)">
+    <rect x="190" y="12" width="300" height="207" rx="24" fill="url(#d3-rim)"/>
+    <rect x="191.6" y="13.6" width="296.8" height="203.8" rx="22.4" fill="url(#d3-glass)"/>
+    <rect x="190.6" y="12.6" width="298.8" height="205.8" rx="23.4" fill="none" stroke="url(#d3-edge)" stroke-width="1.2"/>
+  </g>
+  <!-- camera on top edge (long side) -->
+  <circle cx="340" cy="17.8" r="1.9" fill="#2B3240"/>
+  <circle cx="339.4" cy="17.2" r=".6" fill="#6C7A96" opacity=".8"/>
+
+  <g transform="translate(200 22)">
+    <g clip-path="url(#d3-clip-main)">
+      <rect width="280" height="187" fill="#FFFFFF"/>
+
+      <!-- sidebar -->
+      <rect width="56" height="187" fill="#F4F5F8"/>
+      <rect x="13" y="14" width="30" height="30" rx="8" fill="url(#d3-brand)"/>
+      <use href="#d3-mark" xlink:href="#d3-mark" x="13" y="14" width="30" height="30"/>
+      <rect x="10" y="56" width="36" height="20" rx="6" fill="#FFE3EB"/>
+      <rect x="22" y="60.5" width="12" height="11" rx="3" fill="#FF1456"/>
+      <rect x="22" y="86" width="12" height="11" rx="3" fill="#CDD1D9"/>
+      <rect x="22" y="108" width="12" height="11" rx="3" fill="#CDD1D9"/>
+      <rect x="22" y="130" width="12" height="11" rx="3" fill="#CDD1D9"/>
+      <circle cx="28" cy="168" r="8" fill="#DDE0E6"/>
+
+      <!-- header -->
+      <rect x="68" y="20" width="56" height="11" rx="3" fill="#1C2130"/>
+      <rect x="68" y="37" width="64" height="4.5" rx="2.25" fill="#C9CDD6"/>
+      <rect x="216" y="18" width="52" height="17" rx="8.5" fill="#F3F4F7"/>
+      <circle cx="226" cy="26.5" r="3" fill="#FF1456"/>
+      <rect x="233" y="24.5" width="27" height="4" rx="2" fill="#9CA2AE"/>
+
+      <!-- hero card (brand gradient + motif) -->
+      <rect x="68" y="50" width="122" height="54" rx="10" fill="url(#d3-brand)"/>
+      <circle cx="170" cy="61" r="30" fill="#FFFFFF" opacity=".08"/>
+      <use href="#d3-mark" xlink:href="#d3-mark" x="70" y="53" width="48" height="48"/>
+      <rect x="124" y="64" width="44" height="5.5" rx="2.75" fill="#FFFFFF"/>
+      <rect x="124" y="75" width="30" height="4" rx="2" fill="#FFFFFF" opacity=".7"/>
+      <rect x="124" y="88" width="56" height="5" rx="2.5" fill="#FFFFFF" opacity=".28"/>
+      <rect x="124" y="88" width="42" height="5" rx="2.5" fill="#FFFFFF"/>
+
+      <!-- stats card -->
+      <rect x="197" y="50" width="71" height="54" rx="10" fill="#FFFFFF" stroke="#E9EBF0" stroke-width="1"/>
+      <rect x="206" y="58" width="28" height="4" rx="2" fill="#B4BAC5"/>
+      <rect x="206" y="80" width="7" height="16" rx="2" fill="#FFD3DF"/>
+      <rect x="217" y="74" width="7" height="22" rx="2" fill="#FFD3DF"/>
+      <rect x="228" y="78" width="7" height="18" rx="2" fill="#FFD3DF"/>
+      <rect x="239" y="67" width="7" height="29" rx="2" fill="url(#d3-bar)"/>
+      <rect x="250" y="72" width="7" height="24" rx="2" fill="#FFD3DF"/>
+
+      <!-- checklist -->
+      <g>
+        <rect x="68" y="113" width="200" height="20" rx="6" fill="#F6F7F9"/>
+        <circle cx="80" cy="123" r="6" fill="url(#d3-brand)"/>
+        <use href="#d3-tick" xlink:href="#d3-tick" x="74" y="117" width="12" height="12"/>
+        <rect x="93" y="120.5" width="84" height="5" rx="2.5" fill="#A3A9B5"/>
+        <rect x="236" y="118.5" width="24" height="9" rx="4.5" fill="#FFE3EB"/>
+      </g>
+      <g>
+        <rect x="68" y="137" width="200" height="20" rx="6" fill="#F6F7F9"/>
+        <circle cx="80" cy="147" r="6" fill="url(#d3-brand)"/>
+        <use href="#d3-tick" xlink:href="#d3-tick" x="74" y="141" width="12" height="12"/>
+        <rect x="93" y="144.5" width="66" height="5" rx="2.5" fill="#A3A9B5"/>
+      </g>
+      <g>
+        <rect x="68" y="161" width="200" height="20" rx="6" fill="#F6F7F9"/>
+        <circle cx="80" cy="171" r="5.3" fill="#FFFFFF" stroke="#C3C8D2" stroke-width="1.4"/>
+        <rect x="93" y="168.5" width="78" height="5" rx="2.5" fill="#3A4050"/>
+        <rect x="236" y="166.5" width="24" height="9" rx="4.5" fill="#EEF0F4"/>
+      </g>
+
+      <!-- glass sheen -->
+      <rect width="280" height="187" fill="url(#d3-sheen)"/>
+    </g>
+  </g>
+</svg>
