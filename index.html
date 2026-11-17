@@ -163,7 +163,7 @@ header { border-top: 0; padding-top: 0; }
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXEAAAFxAQAAAACt/KUJAAADqUlEQVR4nO1bW47iQAysbpAy0n4wNwg3CTcL3CzcBG4Q/kBiUis/EsLPDivtsJbS/pmeYKFWjF3lcjdgloiWJ1T3RKA5ba4rkntfoO3cDRl/Z7n4/+P305LkHeAe2FzWtrhsbvpN9fnjKyXuUYsXy/sP8Ps8pvSh6+NW/yR2NS/VALSHLbAakCSCKcl3l3z5s+W3+ae0q88fYGJKKUla4bA7f1a3FSXj3r6f1ywv2L85flZ3W27IQZ6wx+or/af9vGJ5Yf5w/BK+0dVUdoHGiUdL9hUHUCpkwa8Y8T1I+Vvbf0Yz2kPTY0K0rxXTHmfxSvF+b3lh/tC8sdxRS4JWlmik0HhdjLaPtv+8xHrYG2wpWg2QtkvDBCmV15UAmZiWymj7zwvzh7Zdml9tB2uT2dUWOHZQIPNEGwLuPy/MH6ZmmL7hhXFGM+DEo6v1Sbz954X5w2nhMFtoYdSPONVDybiCXzHyi4pfQjP6amIWhmgnK5VoCt8IEy8YWunCq5+hFYV4WCglpkU/jME3mlk2XfVZM+IXR6EeRkXi1fO8MH/MuIQGxfBr1n9B+KEDWem/YvBDjmOvaSGMkZSJmISypQBZiVcY/ZCqb0yyxsgG4QxE9flSD4PoUSdbyXzZ9KgRv/bSSpvw6z1auHqeF+aPJ1ne2fsTUYQVRoW2gl8h+GFvC+EbGp3O0op8yjh5UvTeAPkFn06O/FCr3wRkmCVavPqQF+YPJ+2ub5gs7wyfQjPGwWWZV0aap5BzkJJ5ihdGt+mEW7TfW16Y/5o47lB92YB5I9Pk6bPU7onbrzuSj56HePvPC/NfJzSn7a0ao3RfS3AaQg5KHRI2vYbpbfvJxf8ba3XIZfjlopMr9hjL4FQzy/uMwDdqxy9lg0bs/YR2Z08ejLHgV4R5CrXbskZM9UPvtiZTDV8XpV5F0OfhpzVGfcM6Mtp5gHnGFXwJ1H81LiTOBiunh75R4hVH763mh3in/gsqLT4rwKUeRsCv67MwNR5EJP3gjVqZp7xg+af9afnl53tvawGp43bD24o47DxMwuchN1YKfgXILzEJk6iFdnDUMo6P+Zdwfh09l3oY5X4K7aDvWAatHp4mn3L+MM48BZY7Ov8yBmJA1nrgzMp57FDxok5PxoMcNq/sxgrp+kaph99ZfqN/w/6W9HY5LnIxNqWdZJzckN0Jfr17P69YXi5+UcqgqBnTMVGOY2W7ulLuOwTjh7V1x48wUS6CudBR+uVX7Kfj9RsJnUd0LEFllwAAAABJRU5ErkJggg==" alt="iPad mini 採購登記表 QR code" width="200" height="200">
       <div class="txt">
         <div class="big">掃碼登記</div>
-        <div>iPad mini 採購登記表<br><span style="color:var(--muted)">登記採購、回報付款都用這一張表</span></div>
+        <div>iPad mini 採購登記表<br><span style="color:var(--muted)">登記採購、回報付款都用這一張表；填寫前請先登入 Google 帳號</span></div>
         <p class="mailtip">送出登記後會收到<b>確認信</b>（寄件人「TLE 平板團購」，含應付金額與匯款資料）。如果沒收到，可以看看<b>垃圾郵件</b>或<b>促銷內容</b>。</p>
         <div class="row">
           <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScBRnBCwPRIjfkRc_nUYg1U1YS1kxVSOd4e8PlcC0XqD_pPJw/viewform" target="_blank" rel="noopener">開啟登記表</a>
@@ -178,7 +178,7 @@ header { border-top: 0; padding-top: 0; }
   <section aria-labelledby="h-lookup">
     <h2 id="h-lookup">付款回報查詢</h2>
     <div class="lookup">
-      <p style="margin:0">填完「回報付款」後，可以在這裡輸入您匯出帳戶的<b>末五碼</b>，確認表單已經送達。</p>
+      <p style="margin:0">匯款的「回報付款」送出後，可以在這裡輸入您匯出帳戶的<b>末五碼</b>，確認表單已經送達。現金付款以出納繳款單為準，不需要在這裡查詢。</p>
       <form id="lookup-form" novalidate>
         <label for="last5" class="note" style="width:100%">帳號末五碼</label>
         <input id="last5" name="last5" inputmode="numeric" autocomplete="off" maxlength="5" pattern="\d{5}" placeholder="12345" aria-describedby="lookup-note">
@@ -224,18 +224,22 @@ header { border-top: 0; padding-top: 0; }
 ① 填寫登記表
 選身分與希望領取日期：
 https://docs.google.com/forms/d/e/1FAIpQLScBRnBCwPRIjfkRc_nUYg1U1YS1kxVSOd4e8PlcC0XqD_pPJw/viewform
+・填寫前請先登入 Google 帳號
 ・送出後會收到「登記確認信」，寄件人「TLE 平板團購」，主旨開頭【iPad mini 團購】
 ・如果沒收到，可以看看「垃圾郵件」或「促銷內容」資料夾
 
-② 匯款
+② 付款（匯款或現金）
 銀行：兆豐國際商業銀行 國外部（017）
 帳號：007-09-10176-0（ATM 轉帳輸入 00709101760）
 戶名：雄獅旅行社股份有限公司
 ・麻煩用您本人的帳戶匯款，一人一筆、金額與應付金額相同，方便出納核對
+・付現金：請到出納繳款，並保留繳款單
 
 ③ 回報付款
-匯款後再開一次登記表，選「回報付款」，填上您匯出帳戶的末五碼。
-回報後可到公告頁輸入末五碼，確認表單已送達：
+付款後再開一次登記表，選「回報付款」，再選付款方式：
+・匯款：填您匯出帳戶的末五碼
+・現金：上傳出納繳款單的照片
+匯款回報後，可到公告頁輸入末五碼，確認表單已送達：
 https://hoyinzlionwork-cmd.github.io/tablet-notice/
 
 ④ 本人領取・驗收
@@ -259,12 +263,12 @@ https://hoyinzlionwork-cmd.github.io/tablet-notice/
           <div class="meta">PNG・手機直式，可直接轉傳 LINE</div>
         </div>
         <div class="row">
-          <a class="btn" href="leader-flyer.png?v=202611171023" target="_blank" rel="noopener">開啟圖片</a>
-          <a class="btn" href="leader-flyer.png?v=202611171023" download="導領平板申購說明.png">下載圖片</a>
+          <a class="btn" href="leader-flyer.png?v=202611171237" target="_blank" rel="noopener">開啟圖片</a>
+          <a class="btn" href="leader-flyer.png?v=202611171237" download="導領平板申購說明.png">下載圖片</a>
         </div>
       </div>
     </div>
-        <img class="flyer" src="leader-flyer.png?v=202611171023" alt="導領平板申購說明圖預覽" loading="lazy">
+        <img class="flyer" src="leader-flyer.png?v=202611171237" alt="導領平板申購說明圖預覽" loading="lazy">
   </section>
 </div>
 
